@@ -1,0 +1,218 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #030027; /* Black background */
+    color: #fff; /* White text color */
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/* Logo Section */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Space between Instagram link and logo */
+}
+
+.logo img {
+    max-width: 150px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* White shadow with slight blur */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Logo zooms on hover */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Stronger white shadow on hover */
+}
+
+.title {
+    margin-top: 20px; /* Add space between logo and title */
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-right: 2px solid #fff; /* Cursor effect */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Connect with Us Section (without box) */
+.connect-us {
+    text-align: center;
+    margin-top: 30px; /* Spacing from the title */
+    font-size: 18px;
+    color: rgb(238, 236, 241); /* White text */
+    font-weight: bold;
+}
+
+.connect-us p {
+    margin-bottom: 10px;
+    font-size: 20px; /* Larger font size for connect text */
+    text-shadow: 2px 2px 5px rgba(22, 4, 57, 0.7); /* White shadow effect on text */
+}
+
+.instagram-icon {
+    font-size: 40px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.instagram-icon:hover {
+    transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Review Section */
+.review-section {
+    margin-top: 40px; /* Spacing from the Instagram section */
+    width: 60%; /* Reduced width for the review box */
+    max-width: 500px; /* Maximum width */
+    background: #000000; /* Dark background for review section */
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.review-section h2 {
+    font-size: 20px; /* Adjusted heading size */
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+#reviewText {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #0e0d0d;
+    color: #fff;
+    margin-bottom: 20px;
+    resize: none; /* Disables resizing */
+    box-shadow: 0 0 10px rgba(142, 47, 47, 0.1); /* Light shadow for the textbox */
+}
+
+#reviewText:focus {
+    outline: none;
+    border: 1px solid #02152b; /* Focus border color */
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.8); /* Blue glow on focus */
+}
+
+button {
+    padding: 8px 16px; /* Adjusted button size */
+    background-color: #282828;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; /* Adjusted font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #021b38;
+}
+
+/* Responsive Styles for Review Box (for smaller screens) */
+@media (max-width: 480px) {
+    .review-section {
+        width: 90%; /* Increased width for mobile */
+        padding: 12px; /* Slightly adjusted padding */
+    }
+
+    #reviewText {
+        font-size: 12px; /* Adjusted font size for mobile */
+    }
+
+    button {
+        font-size: 12px; /* Adjusted button font size */
+    }
+}
+
+/* Responsive Styles */
+
+/* Medium screens (tablets, smaller desktops) */
+@media (max-width: 768px) {
+    .title {
+        font-size: 20px; /* Smaller font size for tablets */
+    }
+
+    .logo img {
+        max-width: 120px; /* Smaller logo size for tablets */
+    }
+
+    .connect-us p {
+        font-size: 16px; /* Adjust text size */
+    }
+
+    .instagram-icon {
+        font-size: 35px; /* Slightly smaller Instagram icon */
+    }
+
+    .review-section {
+        width: 90%; /* Adjust width for tablets */
+    }
+
+    .review-section h2 {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    #reviewText {
+        font-size: 14px; /* Adjust font size for text box */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button font size */
+    }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    .logo img {
+        max-width: 100px; /* Even smaller logo for mobile */
+    }
+
+    .connect-us {
+        margin-top: 20px; /* Less margin on smaller screens */
+        padding: 15px; /* Less padding for smaller screens */
+    }
+
+    .review-section {
+        width: 100%; /* Full width for mobile */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .review-section h2 {
+        font-size: 18px; /* Adjust heading size for mobile */
+    }
+
+    #reviewText {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+
+    button {
+        font-size: 14px; /* Button font size adjustment */
+    }
+}
